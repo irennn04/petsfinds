@@ -140,7 +140,7 @@ class UnifiedPetRegistry:
 
 # ===================== СОЗДАЁМ ПРИЛОЖЕНИЕ =====================
 
-app = FastAPI(title="🐾 UniPet - Единая база чипированных животных")
+app = FastAPI(title="🐾 FindMyPet - Единая база чипированных животных")
 
 # Настройка CORS
 app.add_middleware(
@@ -162,7 +162,7 @@ HTML_TEMPLATE = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🐾 UniPet - Единая база чипированных животных</title>
+    <title>🐾 FindMyPet - Единая база чипированных животных</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -401,7 +401,7 @@ HTML_TEMPLATE = """
 <body>
     <div class="container">
         <div class="header">
-            <h1>🐾 UniPet</h1>
+            <h1>🐾 FindMyPet</h1>
             <p>Международная база чипированных животных</p>
         </div>
         
@@ -625,7 +625,7 @@ async def health_check():
     return {
         "status": "OK",
         "timestamp": datetime.now().isoformat(),
-        "service": "UniPet Registry",
+        "service": "FindMyPet Registry",
         "version": "1.0.0"
     }
 
